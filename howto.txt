@@ -1,0 +1,48 @@
+A)Prérequis : 
+
+	1)Pour pouvoir utiliser cet outil de traceroute, vous devez disposer de:
+		-Python 3.x installé sur votre ordinateur
+
+	2)Les packages suivants installés:
+		-socket
+		-struct
+		-random
+		-time
+		-argparse
+		-matplotlib
+		-networkx
+		-scapy
+
+B)Installation :
+
+	1)Clonez le dépôt Git contenant le code source de l'outil de traceroute.
+
+	2)Ouvrez un terminal et naviguez vers le répertoire contenant les fichiers du dépôt.
+
+	3)Installez les packages nécessaires en exécutant la commande suivante:
+		-python -m pip install -r requirements.txt
+
+	4)Vous êtes maintenant prêt à utiliser l'outil de traceroute.
+
+C)Utilisation : 
+
+	1)Ouvrez un terminal et naviguez vers le répertoire contenant les fichiers du dépôt.
+
+	2)Exécutez le programme en utilisant la commande suivante:
+
+		python Traceroute.py ip_list.txt 
+
+				ou
+
+		python Traceroute.py ip_list.txt [-s PACKET_SIZE] [-t TIMEOUT] [-m MAX_TTL] [-p PORT] [-n NPACKETS] [-r RETRIES]
+			-ip_list.txt est le nom du fichier contenant la liste des adresses IP à tracer.
+			-s PACKET_SIZE est la taille du paquet à envoyer (en octets).
+			-t TIMEOUT est le temps d'attente maximal (en secondes) avant d'abandonner la tentative de réponse.
+			-m MAX_TTL est la valeur maximale du temps de vie (TTL) à utiliser.
+			-p PORT est le numéro de port de destination à utiliser.
+			-n NPACKETS est le nombre de paquets à envoyer pour chaque TTL.
+			-r RETRIES est le nombre de tentatives à effectuer avant d'abandonner l'envoi du paquet.
+
+	3)Le programme produira un fichier texte pour chaque adresse IP du fichier de liste avec le préfixe "results_" contenant les résultats de la trace pour cette adresse IP.
+
+	4)Le programme affichera également un graphique représentant la topologie du réseau.
